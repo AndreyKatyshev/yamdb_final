@@ -1,0 +1,3761 @@
+============================= test session starts =============================
+platform win32 -- Python 3.9.2, pytest-6.2.4, py-1.11.0, pluggy-0.13.1 -- c:\dev\api_yamdb\venv\scripts\python.exe
+django: settings: api_yamdb.settings (from ini)
+rootdir: C:\Dev\api_yamdb, configfile: pytest.ini, testpaths: tests/
+plugins: django-4.4.0, pythonpath-0.7.3
+collecting ... collected 53 items
+
+tests/test_00_user_registration.py::Test00UserRegistration::test_00_nodata_signup ERROR [  1%]
+tests/test_00_user_registration.py::Test00UserRegistration::test_00_invalid_data_signup ERROR [  3%]
+tests/test_00_user_registration.py::Test00UserRegistration::test_00_valid_data_user_signup ERROR [  5%]
+tests/test_00_user_registration.py::Test00UserRegistration::test_00_valid_data_admin_create_user ERROR [  7%]
+tests/test_00_user_registration.py::Test00UserRegistration::test_00_obtain_jwt_token_invalid_data ERROR [  9%]
+tests/test_00_user_registration.py::Test00UserRegistration::test_00_registration_me_username_restricted ERROR [ 11%]
+tests/test_00_user_registration.py::Test00UserRegistration::test_00_registration_same_email_restricted ERROR [ 13%]
+tests/test_01_users.py::Test01UserAPI::test_01_users_not_authenticated ERROR [ 15%]
+tests/test_01_users.py::Test01UserAPI::test_02_users_username_not_authenticated ERROR [ 16%]
+tests/test_01_users.py::Test01UserAPI::test_03_users_me_not_authenticated ERROR [ 18%]
+tests/test_01_users.py::Test01UserAPI::test_04_users_get_admin ERROR     [ 20%]
+tests/test_01_users.py::Test01UserAPI::test_04_02_users_get_search ERROR [ 22%]
+tests/test_01_users.py::Test01UserAPI::test_04_01_users_get_admin_only ERROR [ 24%]
+tests/test_01_users.py::Test01UserAPI::test_05_01_users_post_admin ERROR [ 26%]
+tests/test_01_users.py::Test01UserAPI::test_05_02_users_post_user_superuser ERROR [ 28%]
+tests/test_01_users.py::Test01UserAPI::test_06_users_username_get_admin ERROR [ 30%]
+tests/test_01_users.py::Test01UserAPI::test_06_users_username_get_not_admin ERROR [ 32%]
+tests/test_01_users.py::Test01UserAPI::test_07_01_users_username_patch_admin ERROR [ 33%]
+tests/test_01_users.py::Test01UserAPI::test_07_02_users_username_patch_moderator ERROR [ 35%]
+tests/test_01_users.py::Test01UserAPI::test_07_03_users_username_patch_user ERROR [ 37%]
+tests/test_01_users.py::Test01UserAPI::test_07_05_users_username_put_user_restricted ERROR [ 39%]
+tests/test_01_users.py::Test01UserAPI::test_08_01_users_username_delete_admin ERROR [ 41%]
+tests/test_01_users.py::Test01UserAPI::test_08_02_users_username_delete_moderator ERROR [ 43%]
+tests/test_01_users.py::Test01UserAPI::test_08_03_users_username_delete_user ERROR [ 45%]
+tests/test_01_users.py::Test01UserAPI::test_08_04_users_username_delete_superuser ERROR [ 47%]
+tests/test_01_users.py::Test01UserAPI::test_09_users_check_permissions ERROR [ 49%]
+tests/test_01_users.py::Test01UserAPI::test_10_users_me_get_admin ERROR  [ 50%]
+tests/test_01_users.py::Test01UserAPI::test_11_01_users_me_patch_admin ERROR [ 52%]
+tests/test_01_users.py::Test01UserAPI::test_11_02_users_me_patch_user ERROR [ 54%]
+tests/test_02_category.py::Test02CategoryAPI::test_01_category_not_auth ERROR [ 56%]
+tests/test_02_category.py::Test02CategoryAPI::test_02_category_admin ERROR [ 58%]
+tests/test_02_category.py::Test02CategoryAPI::test_03_category_delete_admin ERROR [ 60%]
+tests/test_02_category.py::Test02CategoryAPI::test_04_category_check_permission_admin ERROR [ 62%]
+tests/test_02_category.py::Test02CategoryAPI::test_05_category_create_user ERROR [ 64%]
+tests/test_02_category.py::Test02CategoryAPI::test_06_category_create_moderator ERROR [ 66%]
+tests/test_03_genre.py::Test03GenreAPI::test_01_genre_not_auth ERROR     [ 67%]
+tests/test_03_genre.py::Test03GenreAPI::test_02_genre ERROR              [ 69%]
+tests/test_03_genre.py::Test03GenreAPI::test_03_genres_delete ERROR      [ 71%]
+tests/test_03_genre.py::Test03GenreAPI::test_04_genres_check_permission ERROR [ 73%]
+tests/test_03_genre.py::Test03GenreAPI::test_05_genre_create_user ERROR  [ 75%]
+tests/test_03_genre.py::Test03GenreAPI::test_06_genre_create_moderator ERROR [ 77%]
+tests/test_04_title.py::Test04TitleAPI::test_01_title_not_auth ERROR     [ 79%]
+tests/test_04_title.py::Test04TitleAPI::test_02_title_admin ERROR        [ 81%]
+tests/test_04_title.py::Test04TitleAPI::test_03_titles_detail ERROR      [ 83%]
+tests/test_04_title.py::Test04TitleAPI::test_04_titles_check_permission ERROR [ 84%]
+tests/test_05_review.py::Test05ReviewAPI::test_01_review_not_auth ERROR  [ 86%]
+tests/test_05_review.py::Test05ReviewAPI::test_02_review_admin ERROR     [ 88%]
+tests/test_05_review.py::Test05ReviewAPI::test_03_review_detail ERROR    [ 90%]
+tests/test_05_review.py::Test05ReviewAPI::test_04_reviews_check_permission ERROR [ 92%]
+tests/test_06_comment.py::Test06CommentAPI::test_01_comment_not_auth ERROR [ 94%]
+tests/test_06_comment.py::Test06CommentAPI::test_02_comment ERROR        [ 96%]
+tests/test_06_comment.py::Test06CommentAPI::test_03_review_detail ERROR  [ 98%]
+tests/test_06_comment.py::Test06CommentAPI::test_04_comment_check_permission ERROR [100%]
+
+=================================== ERRORS ====================================
+_______ ERROR at setup of Test00UserRegistration.test_00_nodata_signup ________
+
+request = <SubRequest '_django_db_marker' for <Function test_00_nodata_signup>>
+
+    @pytest.fixture(autouse=True)
+    def _django_db_marker(request) -> None:
+        """Implement the django_db marker, internal to pytest-django.
+    
+        This will dynamically request the ``db``, ``transactional_db`` or
+        ``django_db_reset_sequences`` fixtures as required by the django_db marker.
+        """
+        marker = request.node.get_closest_marker("django_db")
+        if marker:
+            transaction, reset_sequences, databases = validate_django_db(marker)
+    
+            # TODO: Use pytest Store (item.store) once that's stable.
+            request.node._pytest_django_databases = databases
+    
+            if reset_sequences:
+                request.getfixturevalue("django_db_reset_sequences")
+            elif transaction:
+>               request.getfixturevalue("transactional_db")
+
+venv\lib\site-packages\pytest_django\plugin.py:468: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\pytest_django\fixtures.py:117: in django_db_setup
+    db_cfg = setup_databases(
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+---------------------------- Captured stderr setup ----------------------------
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+____ ERROR at setup of Test00UserRegistration.test_00_invalid_data_signup _____
+
+request = <SubRequest '_django_db_marker' for <Function test_00_invalid_data_signup>>
+
+    @pytest.fixture(autouse=True)
+    def _django_db_marker(request) -> None:
+        """Implement the django_db marker, internal to pytest-django.
+    
+        This will dynamically request the ``db``, ``transactional_db`` or
+        ``django_db_reset_sequences`` fixtures as required by the django_db marker.
+        """
+        marker = request.node.get_closest_marker("django_db")
+        if marker:
+            transaction, reset_sequences, databases = validate_django_db(marker)
+    
+            # TODO: Use pytest Store (item.store) once that's stable.
+            request.node._pytest_django_databases = databases
+    
+            if reset_sequences:
+                request.getfixturevalue("django_db_reset_sequences")
+            elif transaction:
+>               request.getfixturevalue("transactional_db")
+
+venv\lib\site-packages\pytest_django\plugin.py:468: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\pytest_django\fixtures.py:117: in django_db_setup
+    db_cfg = setup_databases(
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+___ ERROR at setup of Test00UserRegistration.test_00_valid_data_user_signup ___
+
+request = <SubRequest '_django_db_marker' for <Function test_00_valid_data_user_signup>>
+
+    @pytest.fixture(autouse=True)
+    def _django_db_marker(request) -> None:
+        """Implement the django_db marker, internal to pytest-django.
+    
+        This will dynamically request the ``db``, ``transactional_db`` or
+        ``django_db_reset_sequences`` fixtures as required by the django_db marker.
+        """
+        marker = request.node.get_closest_marker("django_db")
+        if marker:
+            transaction, reset_sequences, databases = validate_django_db(marker)
+    
+            # TODO: Use pytest Store (item.store) once that's stable.
+            request.node._pytest_django_databases = databases
+    
+            if reset_sequences:
+                request.getfixturevalue("django_db_reset_sequences")
+            elif transaction:
+>               request.getfixturevalue("transactional_db")
+
+venv\lib\site-packages\pytest_django\plugin.py:468: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\pytest_django\fixtures.py:117: in django_db_setup
+    db_cfg = setup_databases(
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_ ERROR at setup of Test00UserRegistration.test_00_valid_data_admin_create_user _
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_ ERROR at setup of Test00UserRegistration.test_00_obtain_jwt_token_invalid_data _
+
+request = <SubRequest '_django_db_marker' for <Function test_00_obtain_jwt_token_invalid_data>>
+
+    @pytest.fixture(autouse=True)
+    def _django_db_marker(request) -> None:
+        """Implement the django_db marker, internal to pytest-django.
+    
+        This will dynamically request the ``db``, ``transactional_db`` or
+        ``django_db_reset_sequences`` fixtures as required by the django_db marker.
+        """
+        marker = request.node.get_closest_marker("django_db")
+        if marker:
+            transaction, reset_sequences, databases = validate_django_db(marker)
+    
+            # TODO: Use pytest Store (item.store) once that's stable.
+            request.node._pytest_django_databases = databases
+    
+            if reset_sequences:
+                request.getfixturevalue("django_db_reset_sequences")
+            elif transaction:
+>               request.getfixturevalue("transactional_db")
+
+venv\lib\site-packages\pytest_django\plugin.py:468: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\pytest_django\fixtures.py:117: in django_db_setup
+    db_cfg = setup_databases(
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_ ERROR at setup of Test00UserRegistration.test_00_registration_me_username_restricted _
+
+request = <SubRequest '_django_db_marker' for <Function test_00_registration_me_username_restricted>>
+
+    @pytest.fixture(autouse=True)
+    def _django_db_marker(request) -> None:
+        """Implement the django_db marker, internal to pytest-django.
+    
+        This will dynamically request the ``db``, ``transactional_db`` or
+        ``django_db_reset_sequences`` fixtures as required by the django_db marker.
+        """
+        marker = request.node.get_closest_marker("django_db")
+        if marker:
+            transaction, reset_sequences, databases = validate_django_db(marker)
+    
+            # TODO: Use pytest Store (item.store) once that's stable.
+            request.node._pytest_django_databases = databases
+    
+            if reset_sequences:
+                request.getfixturevalue("django_db_reset_sequences")
+            elif transaction:
+>               request.getfixturevalue("transactional_db")
+
+venv\lib\site-packages\pytest_django\plugin.py:468: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\pytest_django\fixtures.py:117: in django_db_setup
+    db_cfg = setup_databases(
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_ ERROR at setup of Test00UserRegistration.test_00_registration_same_email_restricted _
+
+request = <SubRequest '_django_db_marker' for <Function test_00_registration_same_email_restricted>>
+
+    @pytest.fixture(autouse=True)
+    def _django_db_marker(request) -> None:
+        """Implement the django_db marker, internal to pytest-django.
+    
+        This will dynamically request the ``db``, ``transactional_db`` or
+        ``django_db_reset_sequences`` fixtures as required by the django_db marker.
+        """
+        marker = request.node.get_closest_marker("django_db")
+        if marker:
+            transaction, reset_sequences, databases = validate_django_db(marker)
+    
+            # TODO: Use pytest Store (item.store) once that's stable.
+            request.node._pytest_django_databases = databases
+    
+            if reset_sequences:
+                request.getfixturevalue("django_db_reset_sequences")
+            elif transaction:
+>               request.getfixturevalue("transactional_db")
+
+venv\lib\site-packages\pytest_django\plugin.py:468: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\pytest_django\fixtures.py:117: in django_db_setup
+    db_cfg = setup_databases(
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_______ ERROR at setup of Test01UserAPI.test_01_users_not_authenticated _______
+
+request = <SubRequest '_django_db_marker' for <Function test_01_users_not_authenticated>>
+
+    @pytest.fixture(autouse=True)
+    def _django_db_marker(request) -> None:
+        """Implement the django_db marker, internal to pytest-django.
+    
+        This will dynamically request the ``db``, ``transactional_db`` or
+        ``django_db_reset_sequences`` fixtures as required by the django_db marker.
+        """
+        marker = request.node.get_closest_marker("django_db")
+        if marker:
+            transaction, reset_sequences, databases = validate_django_db(marker)
+    
+            # TODO: Use pytest Store (item.store) once that's stable.
+            request.node._pytest_django_databases = databases
+    
+            if reset_sequences:
+                request.getfixturevalue("django_db_reset_sequences")
+            elif transaction:
+>               request.getfixturevalue("transactional_db")
+
+venv\lib\site-packages\pytest_django\plugin.py:468: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\pytest_django\fixtures.py:117: in django_db_setup
+    db_cfg = setup_databases(
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+__ ERROR at setup of Test01UserAPI.test_02_users_username_not_authenticated ___
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_____ ERROR at setup of Test01UserAPI.test_03_users_me_not_authenticated ______
+
+request = <SubRequest '_django_db_marker' for <Function test_03_users_me_not_authenticated>>
+
+    @pytest.fixture(autouse=True)
+    def _django_db_marker(request) -> None:
+        """Implement the django_db marker, internal to pytest-django.
+    
+        This will dynamically request the ``db``, ``transactional_db`` or
+        ``django_db_reset_sequences`` fixtures as required by the django_db marker.
+        """
+        marker = request.node.get_closest_marker("django_db")
+        if marker:
+            transaction, reset_sequences, databases = validate_django_db(marker)
+    
+            # TODO: Use pytest Store (item.store) once that's stable.
+            request.node._pytest_django_databases = databases
+    
+            if reset_sequences:
+                request.getfixturevalue("django_db_reset_sequences")
+            elif transaction:
+>               request.getfixturevalue("transactional_db")
+
+venv\lib\site-packages\pytest_django\plugin.py:468: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\pytest_django\fixtures.py:117: in django_db_setup
+    db_cfg = setup_databases(
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+___________ ERROR at setup of Test01UserAPI.test_04_users_get_admin ___________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_________ ERROR at setup of Test01UserAPI.test_04_02_users_get_search _________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_______ ERROR at setup of Test01UserAPI.test_04_01_users_get_admin_only _______
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_________ ERROR at setup of Test01UserAPI.test_05_01_users_post_admin _________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+____ ERROR at setup of Test01UserAPI.test_05_02_users_post_user_superuser _____
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+______ ERROR at setup of Test01UserAPI.test_06_users_username_get_admin _______
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+____ ERROR at setup of Test01UserAPI.test_06_users_username_get_not_admin _____
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+____ ERROR at setup of Test01UserAPI.test_07_01_users_username_patch_admin ____
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+__ ERROR at setup of Test01UserAPI.test_07_02_users_username_patch_moderator __
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+____ ERROR at setup of Test01UserAPI.test_07_03_users_username_patch_user _____
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_ ERROR at setup of Test01UserAPI.test_07_05_users_username_put_user_restricted _
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+___ ERROR at setup of Test01UserAPI.test_08_01_users_username_delete_admin ____
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_ ERROR at setup of Test01UserAPI.test_08_02_users_username_delete_moderator __
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+____ ERROR at setup of Test01UserAPI.test_08_03_users_username_delete_user ____
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_ ERROR at setup of Test01UserAPI.test_08_04_users_username_delete_superuser __
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_______ ERROR at setup of Test01UserAPI.test_09_users_check_permissions _______
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_________ ERROR at setup of Test01UserAPI.test_10_users_me_get_admin __________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_______ ERROR at setup of Test01UserAPI.test_11_01_users_me_patch_admin _______
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_______ ERROR at setup of Test01UserAPI.test_11_02_users_me_patch_user ________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+________ ERROR at setup of Test02CategoryAPI.test_01_category_not_auth ________
+
+request = <SubRequest '_django_db_marker' for <Function test_01_category_not_auth>>
+
+    @pytest.fixture(autouse=True)
+    def _django_db_marker(request) -> None:
+        """Implement the django_db marker, internal to pytest-django.
+    
+        This will dynamically request the ``db``, ``transactional_db`` or
+        ``django_db_reset_sequences`` fixtures as required by the django_db marker.
+        """
+        marker = request.node.get_closest_marker("django_db")
+        if marker:
+            transaction, reset_sequences, databases = validate_django_db(marker)
+    
+            # TODO: Use pytest Store (item.store) once that's stable.
+            request.node._pytest_django_databases = databases
+    
+            if reset_sequences:
+                request.getfixturevalue("django_db_reset_sequences")
+            elif transaction:
+>               request.getfixturevalue("transactional_db")
+
+venv\lib\site-packages\pytest_django\plugin.py:468: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\pytest_django\fixtures.py:117: in django_db_setup
+    db_cfg = setup_databases(
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_________ ERROR at setup of Test02CategoryAPI.test_02_category_admin __________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+______ ERROR at setup of Test02CategoryAPI.test_03_category_delete_admin ______
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_ ERROR at setup of Test02CategoryAPI.test_04_category_check_permission_admin _
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+______ ERROR at setup of Test02CategoryAPI.test_05_category_create_user _______
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+____ ERROR at setup of Test02CategoryAPI.test_06_category_create_moderator ____
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+___________ ERROR at setup of Test03GenreAPI.test_01_genre_not_auth ___________
+
+request = <SubRequest '_django_db_marker' for <Function test_01_genre_not_auth>>
+
+    @pytest.fixture(autouse=True)
+    def _django_db_marker(request) -> None:
+        """Implement the django_db marker, internal to pytest-django.
+    
+        This will dynamically request the ``db``, ``transactional_db`` or
+        ``django_db_reset_sequences`` fixtures as required by the django_db marker.
+        """
+        marker = request.node.get_closest_marker("django_db")
+        if marker:
+            transaction, reset_sequences, databases = validate_django_db(marker)
+    
+            # TODO: Use pytest Store (item.store) once that's stable.
+            request.node._pytest_django_databases = databases
+    
+            if reset_sequences:
+                request.getfixturevalue("django_db_reset_sequences")
+            elif transaction:
+>               request.getfixturevalue("transactional_db")
+
+venv\lib\site-packages\pytest_django\plugin.py:468: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\pytest_django\fixtures.py:117: in django_db_setup
+    db_cfg = setup_databases(
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_______________ ERROR at setup of Test03GenreAPI.test_02_genre ________________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+___________ ERROR at setup of Test03GenreAPI.test_03_genres_delete ____________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+______ ERROR at setup of Test03GenreAPI.test_04_genres_check_permission _______
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_________ ERROR at setup of Test03GenreAPI.test_05_genre_create_user __________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_______ ERROR at setup of Test03GenreAPI.test_06_genre_create_moderator _______
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+___________ ERROR at setup of Test04TitleAPI.test_01_title_not_auth ___________
+
+request = <SubRequest '_django_db_marker' for <Function test_01_title_not_auth>>
+
+    @pytest.fixture(autouse=True)
+    def _django_db_marker(request) -> None:
+        """Implement the django_db marker, internal to pytest-django.
+    
+        This will dynamically request the ``db``, ``transactional_db`` or
+        ``django_db_reset_sequences`` fixtures as required by the django_db marker.
+        """
+        marker = request.node.get_closest_marker("django_db")
+        if marker:
+            transaction, reset_sequences, databases = validate_django_db(marker)
+    
+            # TODO: Use pytest Store (item.store) once that's stable.
+            request.node._pytest_django_databases = databases
+    
+            if reset_sequences:
+                request.getfixturevalue("django_db_reset_sequences")
+            elif transaction:
+>               request.getfixturevalue("transactional_db")
+
+venv\lib\site-packages\pytest_django\plugin.py:468: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\pytest_django\fixtures.py:117: in django_db_setup
+    db_cfg = setup_databases(
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+____________ ERROR at setup of Test04TitleAPI.test_02_title_admin _____________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+___________ ERROR at setup of Test04TitleAPI.test_03_titles_detail ____________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+______ ERROR at setup of Test04TitleAPI.test_04_titles_check_permission _______
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+__________ ERROR at setup of Test05ReviewAPI.test_01_review_not_auth __________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+___________ ERROR at setup of Test05ReviewAPI.test_02_review_admin ____________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+___________ ERROR at setup of Test05ReviewAPI.test_03_review_detail ___________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_____ ERROR at setup of Test05ReviewAPI.test_04_reviews_check_permission ______
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_________ ERROR at setup of Test06CommentAPI.test_01_comment_not_auth _________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_____________ ERROR at setup of Test06CommentAPI.test_02_comment ______________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+__________ ERROR at setup of Test06CommentAPI.test_03_review_detail ___________
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+_____ ERROR at setup of Test06CommentAPI.test_04_comment_check_permission _____
+
+request = <SubRequest 'django_db_setup' for <Function test_00_nodata_signup>>
+django_test_environment = None
+django_db_blocker = <pytest_django.plugin._DatabaseBlocker object at 0x00000210274DEAC0>
+django_db_use_migrations = True, django_db_keepdb = False
+django_db_createdb = False, django_db_modify_db_settings = None
+
+    @pytest.fixture(scope="session")
+    def django_db_setup(
+        request,
+        django_test_environment: None,
+        django_db_blocker,
+        django_db_use_migrations: bool,
+        django_db_keepdb: bool,
+        django_db_createdb: bool,
+        django_db_modify_db_settings: None,
+    ) -> None:
+        """Top level fixture to ensure test databases are available"""
+        from django.test.utils import setup_databases, teardown_databases
+    
+        setup_databases_args = {}
+    
+        if not django_db_use_migrations:
+            _disable_native_migrations()
+    
+        if django_db_keepdb and not django_db_createdb:
+            setup_databases_args["keepdb"] = True
+    
+        with django_db_blocker.unblock():
+>           db_cfg = setup_databases(
+                verbosity=request.config.option.verbose,
+                interactive=False,
+                **setup_databases_args
+            )
+
+venv\lib\site-packages\pytest_django\fixtures.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\django\test\utils.py:170: in setup_databases
+    connection.creation.create_test_db(
+venv\lib\site-packages\django\db\backends\base\creation.py:67: in create_test_db
+    call_command(
+venv\lib\site-packages\django\core\management\__init__.py:148: in call_command
+    return command.execute(*args, **defaults)
+venv\lib\site-packages\django\core\management\base.py:364: in execute
+    output = self.handle(*args, **options)
+venv\lib\site-packages\django\core\management\base.py:83: in wrapped
+    res = handle_func(*args, **kwargs)
+venv\lib\site-packages\django\core\management\commands\migrate.py:87: in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+venv\lib\site-packages\django\db\migrations\executor.py:18: in __init__
+    self.loader = MigrationLoader(self.connection)
+venv\lib\site-packages\django\db\migrations\loader.py:49: in __init__
+    self.build_graph()
+venv\lib\site-packages\django\db\migrations\loader.py:274: in build_graph
+    raise exc
+venv\lib\site-packages\django\db\migrations\loader.py:248: in build_graph
+    self.graph.validate_consistency()
+venv\lib\site-packages\django\db\migrations\graph.py:195: in validate_consistency
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+venv\lib\site-packages\django\db\migrations\graph.py:195: in <listcomp>
+    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <DummyNode: ('auth', '0012_alter_user_first_name_max_length')>
+
+    def raise_error(self):
+>       raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)
+E       django.db.migrations.exceptions.NodeNotFoundError: Migration users.0001_initial dependencies reference nonexistent parent node ('auth', '0012_alter_user_first_name_max_length')
+
+venv\lib\site-packages\django\db\migrations\graph.py:58: NodeNotFoundError
+=========================== short test summary info ===========================
+ERROR tests/test_00_user_registration.py::Test00UserRegistration::test_00_nodata_signup
+ERROR tests/test_00_user_registration.py::Test00UserRegistration::test_00_invalid_data_signup
+ERROR tests/test_00_user_registration.py::Test00UserRegistration::test_00_valid_data_user_signup
+ERROR tests/test_00_user_registration.py::Test00UserRegistration::test_00_valid_data_admin_create_user
+ERROR tests/test_00_user_registration.py::Test00UserRegistration::test_00_obtain_jwt_token_invalid_data
+ERROR tests/test_00_user_registration.py::Test00UserRegistration::test_00_registration_me_username_restricted
+ERROR tests/test_00_user_registration.py::Test00UserRegistration::test_00_registration_same_email_restricted
+ERROR tests/test_01_users.py::Test01UserAPI::test_01_users_not_authenticated
+ERROR tests/test_01_users.py::Test01UserAPI::test_02_users_username_not_authenticated
+ERROR tests/test_01_users.py::Test01UserAPI::test_03_users_me_not_authenticated
+ERROR tests/test_01_users.py::Test01UserAPI::test_04_users_get_admin - django...
+ERROR tests/test_01_users.py::Test01UserAPI::test_04_02_users_get_search - dj...
+ERROR tests/test_01_users.py::Test01UserAPI::test_04_01_users_get_admin_only
+ERROR tests/test_01_users.py::Test01UserAPI::test_05_01_users_post_admin - dj...
+ERROR tests/test_01_users.py::Test01UserAPI::test_05_02_users_post_user_superuser
+ERROR tests/test_01_users.py::Test01UserAPI::test_06_users_username_get_admin
+ERROR tests/test_01_users.py::Test01UserAPI::test_06_users_username_get_not_admin
+ERROR tests/test_01_users.py::Test01UserAPI::test_07_01_users_username_patch_admin
+ERROR tests/test_01_users.py::Test01UserAPI::test_07_02_users_username_patch_moderator
+ERROR tests/test_01_users.py::Test01UserAPI::test_07_03_users_username_patch_user
+ERROR tests/test_01_users.py::Test01UserAPI::test_07_05_users_username_put_user_restricted
+ERROR tests/test_01_users.py::Test01UserAPI::test_08_01_users_username_delete_admin
+ERROR tests/test_01_users.py::Test01UserAPI::test_08_02_users_username_delete_moderator
+ERROR tests/test_01_users.py::Test01UserAPI::test_08_03_users_username_delete_user
+ERROR tests/test_01_users.py::Test01UserAPI::test_08_04_users_username_delete_superuser
+ERROR tests/test_01_users.py::Test01UserAPI::test_09_users_check_permissions
+ERROR tests/test_01_users.py::Test01UserAPI::test_10_users_me_get_admin - dja...
+ERROR tests/test_01_users.py::Test01UserAPI::test_11_01_users_me_patch_admin
+ERROR tests/test_01_users.py::Test01UserAPI::test_11_02_users_me_patch_user
+ERROR tests/test_02_category.py::Test02CategoryAPI::test_01_category_not_auth
+ERROR tests/test_02_category.py::Test02CategoryAPI::test_02_category_admin - ...
+ERROR tests/test_02_category.py::Test02CategoryAPI::test_03_category_delete_admin
+ERROR tests/test_02_category.py::Test02CategoryAPI::test_04_category_check_permission_admin
+ERROR tests/test_02_category.py::Test02CategoryAPI::test_05_category_create_user
+ERROR tests/test_02_category.py::Test02CategoryAPI::test_06_category_create_moderator
+ERROR tests/test_03_genre.py::Test03GenreAPI::test_01_genre_not_auth - django...
+ERROR tests/test_03_genre.py::Test03GenreAPI::test_02_genre - django.db.migra...
+ERROR tests/test_03_genre.py::Test03GenreAPI::test_03_genres_delete - django....
+ERROR tests/test_03_genre.py::Test03GenreAPI::test_04_genres_check_permission
+ERROR tests/test_03_genre.py::Test03GenreAPI::test_05_genre_create_user - dja...
+ERROR tests/test_03_genre.py::Test03GenreAPI::test_06_genre_create_moderator
+ERROR tests/test_04_title.py::Test04TitleAPI::test_01_title_not_auth - django...
+ERROR tests/test_04_title.py::Test04TitleAPI::test_02_title_admin - django.db...
+ERROR tests/test_04_title.py::Test04TitleAPI::test_03_titles_detail - django....
+ERROR tests/test_04_title.py::Test04TitleAPI::test_04_titles_check_permission
+ERROR tests/test_05_review.py::Test05ReviewAPI::test_01_review_not_auth - dja...
+ERROR tests/test_05_review.py::Test05ReviewAPI::test_02_review_admin - django...
+ERROR tests/test_05_review.py::Test05ReviewAPI::test_03_review_detail - djang...
+ERROR tests/test_05_review.py::Test05ReviewAPI::test_04_reviews_check_permission
+ERROR tests/test_06_comment.py::Test06CommentAPI::test_01_comment_not_auth - ...
+ERROR tests/test_06_comment.py::Test06CommentAPI::test_02_comment - django.db...
+ERROR tests/test_06_comment.py::Test06CommentAPI::test_03_review_detail - dja...
+ERROR tests/test_06_comment.py::Test06CommentAPI::test_04_comment_check_permission
+============================= 53 errors in 5.43s ==============================
