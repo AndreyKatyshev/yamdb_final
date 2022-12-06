@@ -69,10 +69,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         # 'ENGINE': os.getenv('DB_ENGINE'),
         # 'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('POSTGRES_USER'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
+        'USER': os.getenv('POSTGRES_USER', default='USER'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='USER'),
+        'HOST': os.getenv('DB_HOST', default='USER'),
+        'PORT': os.getenv('DB_PORT', default='USER'),
     }
 }
 
