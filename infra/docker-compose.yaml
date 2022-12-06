@@ -14,7 +14,7 @@ services:
     env_file:
       - ./.env
   web:
-    build: image: andreykatyshev/api_yamdb_for_docker:v1.20.10.22
+    image: andreykatyshev/api_yamdb_for_docker:v1.20.10.22
     restart: always
     volumes:
       # Контейнер web будет работать с данными, хранящиеся в томе static_value, 
