@@ -7,13 +7,11 @@ load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# SECRET_KEY = os.getenv('SECRET_KEY')
-SECRET_KEY = '${{ secrets.SECRET_KEY }}'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = False
 
-# ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
-ALLOWED_HOSTS = '${{ secrets.ALLOWED_HOSTS }}'
+ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -80,12 +78,12 @@ DATABASES = {
         # 'HOST': os.getenv('${{ secrets.DB_HOST }}', default='USER'),
         # 'PORT': os.getenv('${{ secrets.DB_PORT }}', default='USER'),
 
-        'ENGINE': os.environ('DB_ENGINE'),
-        'NAME': os.environ('DB_NAME'),
-        'USER': os.environ('POSTGRES_USER'),
-        'PASSWORD': os.environ('POSTGRES_PASSWORD'),
-        'HOST': os.environ('DB_HOST'),
-        'PORT': os.environ('DB_PORT'),
+        'ENGINE': os.environ['DB_ENGINE'],
+        'NAME': os.environ['DB_NAME'],
+        'USER': os.environ['POSTGRES_USER'],
+        'PASSWORD': os.environ['POSTGRES_PASSWORD'],
+        'HOST': os.environ['DB_HOST'],
+        'PORT': os.environ['DB_PORT'],
     }
 }
 
