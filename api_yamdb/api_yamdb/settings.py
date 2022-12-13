@@ -73,12 +73,19 @@ DATABASES = {
         # 'HOST': '${{ secrets.DB_HOST }}',
         # 'PORT': '${{ secrets.DB_PORT }}',
 
-        'ENGINE': os.getenv('${{ secrets.DB_ENGINE }}', default='django.db.backends.postgresql'),
-        'NAME': os.getenv('${{ secrets.DB_NAME }}', default='postgres'),
-        'USER': os.getenv('${{ secrets.POSTGRES_USER }}', default='postgres'),
-        'PASSWORD': os.getenv('${{ secrets.POSTGRES_PASSWORD }}', default='USER'),
-        'HOST': os.getenv('${{ secrets.DB_HOST }}', default='USER'),
-        'PORT': os.getenv('${{ secrets.DB_PORT }}', default='USER'),
+        # 'ENGINE': os.getenv('${{ secrets.DB_ENGINE }}', default='django.db.backends.postgresql'),
+        # 'NAME': os.getenv('${{ secrets.DB_NAME }}', default='postgres'),
+        # 'USER': os.getenv('${{ secrets.POSTGRES_USER }}', default='postgres'),
+        # 'PASSWORD': os.getenv('${{ secrets.POSTGRES_PASSWORD }}', default='USER'),
+        # 'HOST': os.getenv('${{ secrets.DB_HOST }}', default='USER'),
+        # 'PORT': os.getenv('${{ secrets.DB_PORT }}', default='USER'),
+
+        'ENGINE': os.environ['DB_ENGINE'],
+        'NAME': os.environ['DB_NAME'],
+        'USER': os.environ['POSTGRES_USER'],
+        'PASSWORD': os.environ['POSTGRES_PASSWORD'],
+        'HOST': os.environ['DB_HOST'],
+        'PORT': os.environ['DB_PORT'],
     }
 }
 
