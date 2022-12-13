@@ -8,12 +8,12 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECRET_KEY = os.getenv('SECRET_KEY')
-SECRET_KEY = 'secrets.SECRET_KEY'
+SECRET_KEY = '${{ secrets.SECRET_KEY }}'
 
 DEBUG = False
 
 # ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
-ALLOWED_HOSTS = 'secrets.ALLOWED_HOSTS'
+ALLOWED_HOSTS = '${{ secrets.ALLOWED_HOSTS }}'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -66,12 +66,12 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 
-        'ENGINE': 'secrets.DB_ENGINE',
-        'NAME': 'secrets.DB_NAME ',
-        'USER': 'secrets.POSTGRES_USER',
-        'PASSWORD': 'secrets.POSTGRES_PASSWORD',
-        'HOST': 'secrets.DB_HOST',
-        'PORT': 'secrets.DB_PORT',
+        'ENGINE': '${{ secrets.DB_ENGINE }}',
+        'NAME': '${{ secrets.DB_NAME }}',
+        'USER': '${{ secrets.POSTGRES_USER }}',
+        'PASSWORD': '${{ secrets.POSTGRES_PASSWORD }}',
+        'HOST': '${{ secrets.DB_HOST }}',
+        'PORT': '${{ secrets.DB_PORT }}',
 
         # 'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.postgresql'),
         # 'NAME': os.getenv('DB_NAME', default='postgres'),
