@@ -80,12 +80,12 @@ DATABASES = {
         # 'HOST': os.getenv('${{ secrets.DB_HOST }}', default='USER'),
         # 'PORT': os.getenv('${{ secrets.DB_PORT }}', default='USER'),
 
-        'ENGINE': os.environ['DB_ENGINE'],
-        'NAME': os.environ['DB_NAME'],
-        'USER': os.environ['POSTGRES_USER'],
-        'PASSWORD': os.environ['POSTGRES_PASSWORD'],
-        'HOST': os.environ['DB_HOST'],
-        'PORT': os.environ['DB_PORT'],
+        'ENGINE': os.environ('DB_ENGINE'),
+        'NAME': os.environ('DB_NAME'),
+        'USER': os.environ('POSTGRES_USER'),
+        'PASSWORD': os.environ('POSTGRES_PASSWORD'),
+        'HOST': os.environ('DB_HOST'),
+        'PORT': os.environ('DB_PORT'),
     }
 }
 
