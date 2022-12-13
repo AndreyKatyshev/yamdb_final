@@ -24,8 +24,8 @@ jobs:
     #     python manage.py test 
     #     pytest 
 
-    - name: flake8
-      run: flake8 . --exclude tests,api/migrations,api_yamdb/settings.py,api_yamdb/urls.py
+    # - name: flake8
+    #   run: flake8 . --exclude tests,api/migrations,api_yamdb/settings.py,api_yamdb/urls.py
 
     - name: pytest
       run: pytest
