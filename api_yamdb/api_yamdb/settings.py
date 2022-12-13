@@ -66,19 +66,19 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 
-        'ENGINE': '${{ secrets.DB_ENGINE }}',
-        'NAME': '${{ secrets.DB_NAME }}',
-        'USER': '${{ secrets.POSTGRES_USER }}',
-        'PASSWORD': '${{ secrets.POSTGRES_PASSWORD }}',
-        'HOST': '${{ secrets.DB_HOST }}',
-        'PORT': '${{ secrets.DB_PORT }}',
+        # 'ENGINE': '${{ secrets.DB_ENGINE }}',
+        # 'NAME': '${{ secrets.DB_NAME }}',
+        # 'USER': '${{ secrets.POSTGRES_USER }}',
+        # 'PASSWORD': '${{ secrets.POSTGRES_PASSWORD }}',
+        # 'HOST': '${{ secrets.DB_HOST }}',
+        # 'PORT': '${{ secrets.DB_PORT }}',
 
-        # 'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.postgresql'),
-        # 'NAME': os.getenv('DB_NAME', default='postgres'),
-        # 'USER': os.getenv('POSTGRES_USER', default='postgres'),
-        # 'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='USER'),
-        # 'HOST': os.getenv('DB_HOST', default='USER'),
-        # 'PORT': os.getenv('DB_PORT', default='USER'),
+        'ENGINE': os.getenv('${{ secrets.DB_ENGINE }}', default='django.db.backends.postgresql'),
+        'NAME': os.getenv('${{ secrets.DB_NAME }}', default='postgres'),
+        'USER': os.getenv('${{ secrets.POSTGRES_USER }}', default='postgres'),
+        'PASSWORD': os.getenv('${{ secrets.POSTGRES_PASSWORD }}', default='USER'),
+        'HOST': os.getenv('${{ secrets.DB_HOST }}', default='USER'),
+        'PORT': os.getenv('${{ secrets.DB_PORT }}', default='USER'),
     }
 }
 
