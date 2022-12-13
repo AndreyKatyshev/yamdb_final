@@ -27,8 +27,8 @@ jobs:
     # - name: flake8
     #   run: flake8 . --exclude tests,api/migrations,api_yamdb/settings.py,api_yamdb/urls.py
 
-    - name: pytest
-      run: pytest
+    # - name: pytest
+    #   run: pytest
 
 
   build_and_push_to_docker_hub: 
