@@ -5,8 +5,6 @@ services:
     image: postgres:13.0-alpine
     volumes:
       - db_value:/var/lib/postgresql/data/
-      # не понял где потом надо указывать имя названного тома
-      # - /var/lib/postgresql/data/
     env_file:
       - ./.env
   web:

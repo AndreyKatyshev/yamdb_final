@@ -20,13 +20,7 @@ jobs:
     - name: Test with flake8 and django tests 
       run: | 
         python -m flake8  
-        pytest 
-
-    # - name: flake8
-    #   run: flake8 . --exclude tests,api/migrations,api_yamdb/settings.py,api_yamdb/urls.py
-
-    # - name: pytest
-    #   run: pytest
+        pytest
 
 
   build_and_push_to_docker_hub: 
@@ -47,7 +41,7 @@ jobs:
         uses: docker/build-push-action@v2  
         with: 
           push: true 
-          tags: ${{ secrets.DOCKER_USERNAME }}/infra_action:latest 
+          tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb_for_docker:latest 
 
   deploy: 
     runs-on: ubuntu-latest 
