@@ -55,6 +55,8 @@ jobs:
         key: ${{ secrets.SSH_KEY }} 
 
         script: | 
+          docker-compose --version
+          docker compose version
           sudo docker-compose stop 
           sudo docker-compose rm web 
           touch .env 
