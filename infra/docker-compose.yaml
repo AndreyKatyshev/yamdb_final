@@ -23,7 +23,7 @@ services:
       - "80:80"
     volumes:
       - type: bind
-        source: ./default.conf
+        source: ./nginx/default.conf
         target: /etc/nginx/conf.d/default.conf
       # - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - static_value:/var/html/static/
