@@ -41,7 +41,7 @@ jobs:
         with: 
           context: ./api_yamdb
           push: true 
-          tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb_for_docker:latest 
+          tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb_for_docker
 
   deploy: 
     runs-on: ubuntu-latest 
@@ -56,11 +56,10 @@ jobs:
         key: ${{ secrets.SSH_KEY }} 
 
         script: | 
-          sudo docker pull andreykatyshev/api_yamdb_for_docker:latest 
           sudo docker-compose stop 
           sudo docker-compose rm web 
           touch .env 
-          echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env 
+          echo DB_ENGINE=${{ secrets.DB_ENGINE }} > .env 
           echo DB_NAME=${{ secrets.DB_NAME }} >> .env 
           echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env 
           echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env 
