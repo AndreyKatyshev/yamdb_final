@@ -55,7 +55,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }} 
 
         script: | 
-          sudo docker pull andreykatyshev/api_yamdb_for_docker
+          sudo docker pull andreykatyshev/api_yamdb_for_docker:latest 
           sudo docker-compose stop 
           sudo docker-compose rm web 
           touch .env 
