@@ -23,12 +23,12 @@ http://158.160.9.75/redoc/
 http://158.160.9.75/api/v1/titles/
 
 ### Заполнение файла .env
-DB_ENGINE=django.db.backends.postgresql
-DB_NAME=<имя базы данных>
-POSTGRES_USER=<логин для подключения к базе данных>
-POSTGRES_PASSWORD=<пароль для подключения к БД>
-DB_HOST=<название сервиса (контейнера)>
-DB_PORT=<порт для подключения к БД>
+- DB_ENGINE=django.db.backends.postgresql
+- DB_NAME=<имя базы данных>
+- POSTGRES_USER=<логин для подключения к базе данных>
+- POSTGRES_PASSWORD=<пароль для подключения к БД>
+- DB_HOST=<название сервиса (контейнера)>
+- DB_PORT=<порт для подключения к БД>
 
 ![status badge](https://github.com/andreykatyshev/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
