@@ -61,8 +61,8 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 
         # 'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.sqlite3'),
         # 'NAME': os.getenv('DB_NAME', default=os.path.join(BASE_DIR, 'db.sqlite3')),
@@ -71,12 +71,12 @@ DATABASES = {
         # 'HOST': os.getenv('DB_HOST'),
         # 'PORT': os.getenv('DB_PORT'),
 
-        'ENGINE': os.environ['DB_ENGINE'],
-        'NAME': os.environ['DB_NAME'],
-        'USER': os.environ['POSTGRES_USER'],
-        'PASSWORD': os.environ['POSTGRES_PASSWORD'],
-        'HOST': os.environ['DB_HOST'],
-        'PORT': os.environ['DB_PORT'],
+        # 'ENGINE': os.environ['DB_ENGINE'],
+        # 'NAME': os.environ['DB_NAME'],
+        # 'USER': os.environ['POSTGRES_USER'],
+        # 'PASSWORD': os.environ['POSTGRES_PASSWORD'],
+        # 'HOST': os.environ['DB_HOST'],
+        # 'PORT': os.environ['DB_PORT'],
     }
 }
 
